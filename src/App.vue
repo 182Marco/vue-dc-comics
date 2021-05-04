@@ -5,7 +5,7 @@
       <div class="cont">
         <!-- logo -->
         <img class="logo" src="@/assets/img/dc-logo.png" alt="logo" />
-        <NavigateBar></NavigateBar>
+        <NavigateBar />
       </div>
     </div>
     <div class="stripe3">
@@ -13,18 +13,25 @@
         <h2>-->content goese here</h2>
       </div>
     </div>
-    <div class="stripe4"></div>
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div class="stripe4">
+      <MiddleLinks />
+    </div>
+    <main>
+      <img class="bg" src="@/assets/img/footer-bg.jpg" alt="footer-bg" />
+    </main>
+    <footer></footer>
   </div>
 </template>
 
 <script>
   import NavigateBar from './components/NavigateBar.vue';
+  import MiddleLinks from './components/MiddleLinks.vue';
 
   export default {
     name: 'App',
     components: {
       NavigateBar,
+      MiddleLinks,
     },
   };
 </script>
@@ -36,6 +43,7 @@
     --brand: #1e82f6;
     --white: #fff;
     --black: #000;
+    --bg2: #21232b;
   }
 
   * {
@@ -44,13 +52,19 @@
     padding: 0;
     box-sizing: border-box;
   }
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    height: 100vh;
+  }
+  .cont {
+    height: 100%;
+    width: 80%;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
 
   a {
     text-decoration: none;
-  }
-
-  #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
   }
 
   .stripe1,
@@ -62,7 +76,7 @@
   }
   .stripe2,
   .stripe3 {
-    height: 12vh;
+    height: 10vh;
   }
 
   .stripe2 > .cont {
@@ -71,8 +85,8 @@
     justify-content: space-between;
   }
 
-  img.logo {
-    width: 75px;
+  .logo {
+    width: 60px;
   }
 
   .stripe3 > .cont {
@@ -83,12 +97,21 @@
 
   .stripe4 {
     background-color: var(--brand);
-    height: 16vh;
+    height: 15vh;
   }
 
-  .cont {
+  main {
+    height: 42vh;
+  }
+
+  .bg {
     height: 100%;
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  footer {
+    background-color: var(--bg2);
+    height: 14vh;
   }
 </style>
