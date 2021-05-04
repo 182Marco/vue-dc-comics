@@ -17,21 +17,33 @@
       <MiddleLinks />
     </div>
     <main>
-      <img class="bg" src="@/assets/img/footer-bg.jpg" alt="footer-bg" />
+      <div class="cont">
+        <img src="@/assets/img/dc-logo-bg.png" alt="big-logo" />
+      </div>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="cont">
+        <Btn />
+        <FooterList />
+      </div>
+    </footer>
+    <div class="low-foot"></div>
   </div>
 </template>
 
 <script>
   import NavigateBar from './components/NavigateBar.vue';
   import MiddleLinks from './components/MiddleLinks.vue';
+  import FooterList from './components/FooterList.vue';
+  import Btn from './components/Btn.vue';
 
   export default {
     name: 'App',
     components: {
       NavigateBar,
       MiddleLinks,
+      Btn,
+      FooterList,
     },
   };
 </script>
@@ -43,7 +55,8 @@
     --brand: #1e82f6;
     --white: #fff;
     --black: #000;
-    --bg2: #21232b;
+    --bg2: #303030;
+    --bg3: #252525;
   }
 
   * {
@@ -102,16 +115,33 @@
 
   main {
     height: 42vh;
+    background-image: url('./assets/img/footer-bg.jpg');
   }
 
-  .bg {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+  main > .cont {
+    position: relative;
+    overflow: hidden;
+  }
+
+  img[alt='big-logo'] {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 520px;
   }
 
   footer {
     background-color: var(--bg2);
-    height: 14vh;
+    height: 12vh;
+  }
+  footer > .cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .low-foot {
+    height: 2vh;
+    background-color: var(--bg3);
   }
 </style>
