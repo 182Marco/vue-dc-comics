@@ -18,7 +18,15 @@
     </div>
     <main>
       <div class="cont">
-        <img src="@/assets/img/dc-logo-bg.png" alt="big-logo" />
+        <div class="list-wrap">
+          <div>
+            <Lists :comics="comics" :titles="titles[0]" />
+            <Lists :comics="shops" :titles="titles[1]" />
+          </div>
+          <Lists :comics="dcs" :titles="titles[2]" />
+          <Lists :comics="sites" :titles="titles[3]" />
+          <img src="@/assets/img/dc-logo-bg.png" alt="big-logo" />
+        </div>
       </div>
     </main>
     <footer>
@@ -36,6 +44,7 @@
   import MiddleLinks from './components/MiddleLinks.vue';
   import FooterList from './components/FooterList.vue';
   import Btn from './components/Btn.vue';
+  import Lists from './components/Lists.vue';
 
   export default {
     name: 'App',
@@ -44,6 +53,42 @@
       MiddleLinks,
       Btn,
       FooterList,
+      Lists,
+    },
+    data() {
+      return {
+        titles: ['DC COMICS', 'SHOP', 'DC', 'SITES'],
+        comics: [
+          'Characters',
+          'Comics',
+          'Movies',
+          'TV',
+          'Games',
+          'Videos',
+          'News',
+        ],
+        shops: ['Shop DC', 'Shop DC collections'],
+        dcs: [
+          'Terms of use',
+          'Privacy Policy (New)',
+          'Ad Choices',
+          'Advertising',
+          'Jobs',
+          'Subscriptions',
+          'Talent Workshops',
+          'CPSC Certificates',
+          'Ratings',
+          'Shop Help',
+          'Contact us',
+        ],
+        sites: [
+          'DC',
+          'MAD Magazines',
+          'DC Kids',
+          'DC Universe',
+          'DC Power Visa',
+        ],
+      };
     },
   };
 </script>
@@ -121,6 +166,13 @@
   main > .cont {
     position: relative;
     overflow: hidden;
+  }
+
+  .list-wrap {
+    display: flex;
+    height: 75%;
+    margin-top: 4.3%;
+    overflow-anchor: ;
   }
 
   img[alt='big-logo'] {
