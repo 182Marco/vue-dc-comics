@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <div class="stripe1"></div>
     <div class="stripe2">
       <div class="cont">
         <!-- logo -->
@@ -9,17 +8,24 @@
       </div>
     </div>
     <div class="stripe3">
+      <!-- jumbotron -->
+      <img class="jumbo" src="@/assets/img/jumbotron.jpg" alt="jumbotron.jpg" />
+    </div>
+    <!-- lista fumetti -->
+    <div class="stripe3dot1">
       <div class="cont">
-        <h2>-->content goese here</h2>
+        <Btn class="jumboBtn" :fullBg="fullBg" :content="BtnJumbo" />
       </div>
     </div>
     <div class="stripe4">
+      <!-- links under jumbo -->
       <MiddleLinks />
     </div>
     <main>
       <div class="cont">
         <div class="list-wrap">
           <div>
+            <!-- liste sulla parte con bg img scura -->
             <Lists :comics="comics" :titles="titles[0]" />
             <Lists :comics="shops" :titles="titles[1]" />
           </div>
@@ -29,9 +35,10 @@
         </div>
       </div>
     </main>
+    <!-- footer -->
     <footer>
       <div class="cont">
-        <Btn />
+        <Btn :content="BtnFooter" />
         <FooterList />
       </div>
     </footer>
@@ -61,6 +68,9 @@
     },
     data() {
       return {
+        fullBg: true,
+        BtnJumbo: 'CURRENT SERIES',
+        BtnFooter: 'SIGN UP NOW!',
         titles: ['DC COMICS', 'SHOP', 'DC', 'SITES'],
         comics: dcComics,
         shops: ['Shop DC', 'Shop DC collections'],
@@ -77,7 +87,8 @@
   :root {
     --brand: #1e82f6;
     --white: #fff;
-    --black: #000;
+    --black: rgb(182, 172, 172);
+    --dark: #1c1c1c;
     --bg2: #303030;
     --bg3: #252525;
     --txtLessVisibile: #999;
@@ -104,16 +115,13 @@
     text-decoration: none;
   }
 
-  .stripe1,
-  .stripe3 {
-    background-color: var(--black);
+  .stripe2 {
+    height: 11vh;
   }
-  .stripe1 {
-    height: 9vh;
-  }
-  .stripe2,
+
   .stripe3 {
-    height: 10vh;
+    overflow: hidden;
+    height: 30.5vh;
   }
 
   .stripe2 > .cont {
@@ -127,9 +135,29 @@
   }
 
   .stripe3 > .cont {
+    background-color: var(--black);
     display: flex;
     align-items: center;
     color: var(--white);
+  }
+  .stripe3dot1 {
+    height: 50vh;
+    background-color: var(--dark);
+  }
+  .stripe3dot1 > .cont {
+    position: relative;
+  }
+  .stripe3dot1 > .cont > .jumboBtn {
+    position: absolute;
+    left: 0;
+    /* non si può usare translate (lo uso poi in animazione, 
+    altrimenti si influenzano e fa effetti strani durante
+     l'animazione) */
+    top: -19.5px;
+  }
+
+  img.jumbo {
+    width: 100vw;
   }
 
   .stripe4 {
