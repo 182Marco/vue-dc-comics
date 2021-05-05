@@ -39,5 +39,9 @@
   img {
     vertical-align: middle;
     width: 30px;
+    transition: scale 0.2s;
+    &:hover {
+      transform: scale(1.08);
+    }
   }
 </style>

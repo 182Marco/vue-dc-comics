@@ -39,6 +39,10 @@
     padding: 0 2vw;
     font-size: 0.8rem;
     font-weight: 300;
+    transition: scale 0.4s;
+    &:hover {
+      transform: scale(1.02);
+    }
     span {
       color: $white;
     }

@@ -1,11 +1,11 @@
 <template>
-  <button :class="{ full: fullBg }">{{ content }}</button>
+  <button :class="{ full: fullBg, more: more }">{{ content }}</button>
 </template>
 
 <script>
   export default {
     name: 'Btn',
-    props: ['fullBg', 'content'],
+    props: ['fullBg', 'content', 'more'],
   };
 </script>
 
@@ -15,10 +15,11 @@
     @import '@/scss/var';
     background-color: transparent;
     color: $white;
-    padding: 10px;
+    padding: 10px 15px;
     border: 2px solid $brand;
     transition: background-color 0.4s;
     cursor: pointer;
+    font-weight: 700;
     &:hover {
       background-color: $brand;
     }
@@ -36,16 +37,16 @@
       transform: rotate(0deg);
     }
     20% {
-      transform: rotate(3deg);
+      transform: rotate(2deg);
     }
     40% {
-      transform: rotate(-3deg);
+      transform: rotate(-2deg);
     }
     60% {
-      transform: rotate(3deg);
+      transform: rotate(2deg);
     }
     80% {
-      transform: rotate(-3deg);
+      transform: rotate(-2deg);
     }
     100% {
       transform: rotate(0deg);

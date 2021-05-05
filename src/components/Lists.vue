@@ -11,9 +11,6 @@
   export default {
     props: ['comics', 'titles'],
     name: 'Lists',
-    data() {
-      return {};
-    },
   };
 </script>
 
@@ -33,6 +30,10 @@
       font-size: 0.7rem;
       list-style: none;
       margin: 5px 0;
+      cursor: pointer;
+      &:hover {
+        color: $white;
+      }
     }
   }
 </style>

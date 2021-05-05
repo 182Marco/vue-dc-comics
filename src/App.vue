@@ -15,6 +15,13 @@
     <div class="stripe3dot1">
       <div class="cont">
         <Btn class="jumboBtn" :fullBg="fullBg" :content="BtnJumbo" />
+        <Magazines :dcComics="dcComics" />
+        <Btn
+          class="jumboBtn btnMore"
+          :fullBg="fullBg"
+          :longBtn="longBtn"
+          :content="BtnMore"
+        />
       </div>
     </div>
     <div class="stripe4">
@@ -52,8 +59,10 @@
   import FooterList from '@/components/FooterList.vue';
   import Btn from './components/Btn.vue';
   import Lists from './components/Lists.vue';
+  import Magazines from './components/Magazines.vue';
   // dati
-  import dcComics from './data/comics.js';
+  import dcComics from './data/dcComics.js';
+  import comics from './data/comics.js';
   import dcs from './data/dcs.js';
   import sites from './data/sites.js';
 
@@ -65,14 +74,17 @@
       Btn,
       FooterList,
       Lists,
+      Magazines,
     },
     data() {
       return {
         fullBg: true,
         BtnJumbo: 'CURRENT SERIES',
         BtnFooter: 'SIGN UP NOW!',
+        BtnMore: 'LOAD MORE',
+        dcComics: dcComics,
         titles: ['DC COMICS', 'SHOP', 'DC', 'SITES'],
-        comics: dcComics,
+        comics: comics,
         shops: ['Shop DC', 'Shop DC collections'],
         dcs: dcs,
         sites: sites,

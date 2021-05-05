@@ -1,15 +1,35 @@
+.stripe3 {
+  overflow: hidden;
+  height: 36.5vh;
+  .cont {
+    background-color: $black;
+    display: flex;
+    align-items: center;
+    color: $white;
+  }
+}
+
 .stripe3dot1 {
-  height: 50vh;
+  height: 72vh;
   background-color: $dark;
   .cont {
     position: relative;
     .jumboBtn {
       position: absolute;
       left: 0;
+      font-size: 1.2rem;
+      padding: 6px 18px;
       /* non si può usare translate (lo uso poi in animazione,
     altrimenti si influenzano e fa effetti strani durante
      l'animazione) */
       top: -19.5px;
+      &.btnMore {
+        font-size: 0.7rem;
+        padding: 5px 50px;
+        display: block;
+        position: static;
+        margin: 0 auto;
+      }
     }
   }
 }
@@ -30,11 +50,4 @@ main {
     position: relative;
     overflow: hidden;
   }
-}
-
-.stripe3 > .cont {
-  background-color: $black;
-  display: flex;
-  align-items: center;
-  color: $white;
 }
