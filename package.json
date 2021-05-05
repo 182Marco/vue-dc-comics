@@ -20,7 +20,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "sas": "^3.0.4",
     "sass": "^1.32.12",
-    "sass-loader": "^11.0.1",
+    "sass-loader": "^10.0.1",
     "vue-template-compiler": "^2.6.11"
   }
 }

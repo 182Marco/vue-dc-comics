@@ -1,0 +1,18 @@
+.stripe2 {
+  height: 11vh;
+}
+
+.stripe3 {
+  overflow: hidden;
+  height: 30.5vh;
+}
+
+.stripe2 > .cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 60px;
+}

@@ -23,7 +23,9 @@
   };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  @import '@/scss/var';
+
   ul,
   nav,
   li,
@@ -38,24 +40,23 @@
     padding: 0 0.7vw;
     font-size: 0.7rem;
     font-weight: 700;
-  }
-  li:last-child {
-    padding-right: 0;
-  }
-
-  a {
-    color: var(--black);
-    display: flex;
-    align-items: center;
-    border-bottom: 2px solid transparent;
-    transition: all 0.2s;
-  }
-  a:hover {
-    color: var(--brand);
-    border-bottom: 5px solid var(--brand);
-  }
-  a.active {
-    color: var(--brand);
-    border-bottom: 5px solid var(--brand);
+    &:last-child {
+      padding-right: 0;
+    }
+    a {
+      color: $black;
+      display: flex;
+      align-items: center;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+      &:hover {
+        color: $brand;
+        border-bottom: 5px solid $brand;
+      }
+      &.active {
+        color: $brand;
+        border-bottom: 5px solid $brand;
+      }
+    }
   }
 </style>

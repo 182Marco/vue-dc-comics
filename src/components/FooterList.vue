@@ -24,10 +24,11 @@
   };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  @import '@/scss/var';
   span {
     background-color: transparent;
-    color: var(--brand);
+    color: $brand;
     font-weight: bold;
   }
   ul,

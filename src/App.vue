@@ -81,126 +81,16 @@
   };
 </script>
 
-<style>
+<style lang="scss">
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+  @import './scss/var';
+  @import './scss/reset';
+  @import './scss/utility';
+  @import './scss/navbar';
+  @import './scss/jumbo';
+  @import './scss/footer';
 
-  :root {
-    --brand: #1e82f6;
-    --white: #fff;
-    --black: rgb(182, 172, 172);
-    --dark: #1c1c1c;
-    --bg2: #303030;
-    --bg3: #252525;
-    --txtLessVisibile: #999;
-  }
-
-  * {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
   #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
     height: 100vh;
-  }
-  .cont {
-    height: 100%;
-    width: 80%;
-    max-width: 1080px;
-    margin: 0 auto;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  .stripe2 {
-    height: 11vh;
-  }
-
-  .stripe3 {
-    overflow: hidden;
-    height: 30.5vh;
-  }
-
-  .stripe2 > .cont {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .logo {
-    width: 60px;
-  }
-
-  .stripe3 > .cont {
-    background-color: var(--black);
-    display: flex;
-    align-items: center;
-    color: var(--white);
-  }
-  .stripe3dot1 {
-    height: 50vh;
-    background-color: var(--dark);
-  }
-  .stripe3dot1 > .cont {
-    position: relative;
-  }
-  .stripe3dot1 > .cont > .jumboBtn {
-    position: absolute;
-    left: 0;
-    /* non si può usare translate (lo uso poi in animazione, 
-    altrimenti si influenzano e fa effetti strani durante
-     l'animazione) */
-    top: -19.5px;
-  }
-
-  img.jumbo {
-    width: 100vw;
-  }
-
-  .stripe4 {
-    background-color: var(--brand);
-    height: 15vh;
-  }
-
-  main {
-    height: 42vh;
-    background-image: url('./assets/img/footer-bg.jpg');
-  }
-
-  main > .cont {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .list-wrap {
-    display: flex;
-    height: 75%;
-    margin-top: 4.3%;
-    overflow-anchor: ;
-  }
-
-  img[alt='big-logo'] {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 520px;
-  }
-
-  footer {
-    background-color: var(--bg2);
-    height: 12vh;
-  }
-  footer > .cont {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .low-foot {
-    height: 2vh;
-    background-color: var(--bg3);
   }
 </style>

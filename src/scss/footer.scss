@@ -1,0 +1,27 @@
+footer {
+  background-color: $bg2;
+  height: 12vh;
+  .cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.low-foot {
+  height: 2vh;
+  background-color: $bg3;
+}
+
+.list-wrap {
+  display: flex;
+  height: 75%;
+  margin-top: 4.3%;
+}
+
+img[alt='big-logo'] {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 520px;
+}

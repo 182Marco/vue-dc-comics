@@ -1,0 +1,40 @@
+.stripe3dot1 {
+  height: 50vh;
+  background-color: $dark;
+  .cont {
+    position: relative;
+    .jumboBtn {
+      position: absolute;
+      left: 0;
+      /* non si può usare translate (lo uso poi in animazione,
+    altrimenti si influenzano e fa effetti strani durante
+     l'animazione) */
+      top: -19.5px;
+    }
+  }
+}
+
+img.jumbo {
+  width: 100vw;
+}
+
+.stripe4 {
+  background-color: $brand;
+  height: 15vh;
+}
+
+main {
+  height: 42vh;
+  background-image: url('./assets/img/footer-bg.jpg');
+  .cont {
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+.stripe3 > .cont {
+  background-color: $black;
+  display: flex;
+  align-items: center;
+  color: $white;
+}

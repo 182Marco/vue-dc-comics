@@ -17,21 +17,22 @@
   };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  @import '@/scss/var';
   h3 {
     font-size: 1rem;
     margin-bottom: 10px;
-    color: var(--white);
+    color: $white;
     margin-bottom: 15px 0;
   }
   ul {
     margin-bottom: 20px;
     margin-right: 30px;
-  }
-  li {
-    color: var(--txtLessVisibile);
-    font-size: 0.7rem;
-    list-style: none;
-    margin: 5px 0;
+    li {
+      color: $txtLessVisibile;
+      font-size: 0.7rem;
+      list-style: none;
+      margin: 5px 0;
+    }
   }
 </style>

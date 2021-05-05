@@ -22,7 +22,8 @@
   };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  @import '@/scss/var';
   ul,
   nav,
   li,
@@ -38,18 +39,16 @@
     padding: 0 2vw;
     font-size: 0.8rem;
     font-weight: 300;
-  }
-
-  span {
-    color: var(--white);
+    span {
+      color: $white;
+    }
   }
 
   img {
     width: 50px;
     padding-right: 8px;
-  }
-
-  img[alt='comic Shop Locator'] {
-    width: 40px;
+    &[alt='comic Shop Locator'] {
+      width: 40px;
+    }
   }
 </style>

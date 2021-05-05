@@ -9,24 +9,26 @@
   };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  @import '@/scss/var';
   button {
+    @import '@/scss/var';
     background-color: transparent;
-    color: var(--white);
+    color: $white;
     padding: 10px;
-    border: 2px solid var(--brand);
+    border: 2px solid $brand;
     transition: background-color 0.4s;
     cursor: pointer;
-  }
-  button:hover {
-    background-color: var(--brand);
-  }
-  button.full {
-    background-color: var(--brand);
-  }
-  button.full:hover {
-    animation: tremble;
-    animation-duration: 0.3s;
+    &:hover {
+      background-color: $brand;
+    }
+    &.full {
+      background-color: $brand;
+    }
+    &.full:hover {
+      animation: tremble;
+      animation-duration: 0.3s;
+    }
   }
 
   @keyframes tremble {
