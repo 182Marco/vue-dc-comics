@@ -12,32 +12,13 @@
 </template>
 
 <script>
+  import FootIcons from '@/data/FootIcons.js';
+
   export default {
     name: 'FooterList',
     data() {
       return {
-        FootIcons: [
-          {
-            nome: 'facebook',
-            img: require('../assets/img/footer-facebook.png'),
-          },
-          {
-            nome: 'twitter',
-            img: require('../assets/img/footer-twitter.png'),
-          },
-          {
-            nome: 'you tube',
-            img: require('../assets/img/footer-youtube.png'),
-          },
-          {
-            nome: 'pinterest',
-            img: require('@/assets/img/footer-pinterest.png'),
-          },
-          {
-            nome: 'periscope',
-            img: require('../assets/img/footer-periscope.png'),
-          },
-        ],
+        FootIcons: FootIcons,
       };
     },
   };

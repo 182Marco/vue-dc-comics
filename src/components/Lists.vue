@@ -21,19 +21,17 @@
   h3 {
     font-size: 1rem;
     margin-bottom: 10px;
+    color: var(--white);
+    margin-bottom: 15px 0;
   }
   ul {
     margin-bottom: 20px;
     margin-right: 30px;
   }
   li {
-    color: #999;
+    color: var(--txtLessVisibile);
     font-size: 0.7rem;
     list-style: none;
     margin: 5px 0;
-  }
-  h3 {
-    color: var(--white);
-    margin-bottom: 15px 0;
   }
 </style>

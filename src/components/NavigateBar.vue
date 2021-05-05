@@ -1,7 +1,7 @@
 <template>
   <nav>
     <ul>
-      <li v-for="(item, i) in links" :key="i">
+      <li v-for="(item, i) in navLinks" :key="i">
         <a :href="item.link" :class="{ active: item.active == true }">
           {{ item.nome.toUpperCase() }}</a
         >
@@ -11,62 +11,13 @@
 </template>
 
 <script>
+  import navLinks from '@/data/navLinks.js';
+
   export default {
     name: 'NavigateBar',
     data() {
       return {
-        links: [
-          {
-            link: 'http://google.com',
-            nome: 'CHARACTERS',
-            active: false,
-          },
-          {
-            link: 'http://google.com',
-            nome: 'COMICS',
-            active: true,
-          },
-          {
-            link: 'http://google.com',
-            nome: 'MOVIES',
-            active: false,
-          },
-          {
-            link: 'http://google.com',
-            nome: 'TV',
-            active: false,
-          },
-          {
-            link: 'http://google.com',
-            nome: 'GAMES',
-            active: false,
-          },
-          {
-            link: 'http://google.com',
-            nome: 'collectibles',
-            active: false,
-          },
-          {
-            link: 'http://google.com',
-            nome: 'videos',
-            active: false,
-          },
-          {
-            link: 'http://google.com',
-            nome: 'fans',
-            active: false,
-          },
-          {
-            link: 'http://google.com',
-            nome: 'news',
-            active: false,
-          },
-          {
-            link: 'http://google.com',
-            nome: 'shop',
-            active: false,
-          },
-        ],
+        navLinks: navLinks,
       };
     },
   };

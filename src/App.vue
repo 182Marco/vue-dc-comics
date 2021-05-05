@@ -42,9 +42,13 @@
 <script>
   import NavigateBar from './components/NavigateBar.vue';
   import MiddleLinks from './components/MiddleLinks.vue';
-  import FooterList from './components/FooterList.vue';
+  import FooterList from '@/components/FooterList.vue';
   import Btn from './components/Btn.vue';
   import Lists from './components/Lists.vue';
+  // dati
+  import dcComics from './data/comics.js';
+  import dcs from './data/dcs.js';
+  import sites from './data/sites.js';
 
   export default {
     name: 'App',
@@ -58,36 +62,10 @@
     data() {
       return {
         titles: ['DC COMICS', 'SHOP', 'DC', 'SITES'],
-        comics: [
-          'Characters',
-          'Comics',
-          'Movies',
-          'TV',
-          'Games',
-          'Videos',
-          'News',
-        ],
+        comics: dcComics,
         shops: ['Shop DC', 'Shop DC collections'],
-        dcs: [
-          'Terms of use',
-          'Privacy Policy (New)',
-          'Ad Choices',
-          'Advertising',
-          'Jobs',
-          'Subscriptions',
-          'Talent Workshops',
-          'CPSC Certificates',
-          'Ratings',
-          'Shop Help',
-          'Contact us',
-        ],
-        sites: [
-          'DC',
-          'MAD Magazines',
-          'DC Kids',
-          'DC Universe',
-          'DC Power Visa',
-        ],
+        dcs: dcs,
+        sites: sites,
       };
     },
   };
@@ -102,6 +80,7 @@
     --black: #000;
     --bg2: #303030;
     --bg3: #252525;
+    --txtLessVisibile: #999;
   }
 
   * {
@@ -127,7 +106,7 @@
 
   .stripe1,
   .stripe3 {
-    background-color: #000;
+    background-color: var(--black);
   }
   .stripe1 {
     height: 9vh;
