@@ -22,6 +22,7 @@
 </script>
 
 <style lang="scss" scoped>
+  @import '@/scss/mixins';
   @import '@/scss/var';
   section {
     display: flex;
@@ -34,6 +35,9 @@
     margin-right: 20px;
     margin-bottom: 40px;
     flex-basis: calc(100% / 6 - 20px);
+      @include media-desk-first(desktop) {
+      flex-basis: calc(100% / 4 - 20px);
+      }
     cursor: pointer;
     .box {
       height: 170px;

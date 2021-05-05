@@ -16,12 +16,7 @@
       <div class="cont">
         <Btn class="jumboBtn" :fullBg="fullBg" :content="BtnJumbo" />
         <Magazines :dcComics="dcComics" />
-        <Btn
-          class="jumboBtn btnMore"
-          :fullBg="fullBg"
-          :longBtn="longBtn"
-          :content="BtnMore"
-        />
+        <Btn class="jumboBtn btnMore" :fullBg="fullBg" :content="BtnMore" />
       </div>
     </div>
     <div class="stripe4">
@@ -95,6 +90,7 @@
 
 <style lang="scss">
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+  @import './scss/mixins';
   @import './scss/var';
   @import './scss/reset';
   @import './scss/utility';

@@ -1,0 +1,37 @@
+//media queries
+//media queries se si lavora desktop first
+@mixin media-desk-first($breakpoint: $tablet) {
+  @if $breakpoint == phone {
+    @media screen and (max-width: 380px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media screen and (max-width: 450px) {
+      @content;
+    }
+  } @else if $breakpoint == l-tablet {
+    @media screen and (max-width: 500px) {
+      @content;
+    }
+  } @else if $breakpoint == xl-tablet {
+    @media screen and (max-width: 600px) {
+      @content;
+    }
+  } @else if $breakpoint == xs-desktop {
+    @media screen and (max-width: 700px) {
+      @content;
+    }
+  } @else if $breakpoint == sm-desktop {
+    @media screen and (max-width: 850px) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media screen and (max-width: 950px) {
+      @content;
+    }
+  } @else if $breakpoint == full-desktop {
+    @media screen and (max-width: 1150px) {
+      @content;
+    }
+  }
+}

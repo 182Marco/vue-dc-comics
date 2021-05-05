@@ -1,6 +1,8 @@
+@import '@/scss/mixins';
+
 .stripe3 {
   overflow: hidden;
-  height: 36.5vh;
+  height: 40vh;
   .cont {
     background-color: $black;
     display: flex;
@@ -10,8 +12,18 @@
 }
 
 .stripe3dot1 {
-  height: 72vh;
+  height: 80vh;
   background-color: $dark;
+  padding-bottom: 20px;
+  @include media-desk-first(full-desktop) {
+    height: 85vh;
+  }
+  @include media-desk-first(desktop) {
+    height: 110vh;
+  }
+  @include media-desk-first(sm-desktop) {
+    height: 112vh;
+  }
   .cont {
     position: relative;
     .jumboBtn {
@@ -41,6 +53,9 @@ img.jumbo {
 .stripe4 {
   background-color: $brand;
   height: 15vh;
+  @include media-desk-first(sm-desktop) {
+  height: 50vh;
+  }
 }
 
 main {

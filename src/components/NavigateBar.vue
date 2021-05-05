@@ -24,6 +24,7 @@
 </script>
 
 <style lang="scss" scoped>
+  @import '@/scss/mixins';
   @import '@/scss/var';
 
   ul,
@@ -48,6 +49,9 @@
       display: flex;
       align-items: center;
       border-bottom: 2px solid transparent;
+      @include media-desk-first(sm-desktop) {
+      font-size: 0.6rem
+      }
       transition: all 0.2s;
       &:hover {
         color: $brand;

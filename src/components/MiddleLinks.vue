@@ -23,23 +23,37 @@
 </script>
 
 <style lang="scss" scoped>
+  @import '@/scss/mixins';
   @import '@/scss/var';
-  ul,
+
   nav,
   li,
   a {
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
+ 
+ ul{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+ }
 
   li {
-    display: inline-block;
-    padding: 0 2vw;
     font-size: 0.8rem;
     font-weight: 300;
+    @include media-desk-first(full-desktop) {
+    font-size: 0.7rem;
+    }    
+    @include media-desk-first(desktop) {
+    display:block;
+    flex-wrap: wrap;
+    width: 50vw;
+    }
+    flex-wrap: nowrap;
     transition: scale 0.4s;
+    // flex-wrap: nowrap;
     &:hover {
       transform: scale(1.02);
     }
