@@ -1,9 +1,18 @@
+@import '@/scss/mixins';
+
 footer {
   background-color: $bg2;
   height: 12vh;
+  @include media-desk-first(tablet) {
+    height: 25vh;
+  }
   .cont {
     display: flex;
     justify-content: space-between;
+    @include media-desk-first(tablet) {
+      flex-direction: column;
+      justify-content: space-around;
+    }
     align-items: center;
   }
 }
@@ -20,7 +29,7 @@ footer {
 
 img[alt='big-logo'] {
   position: absolute;
-  right: 0;
+  right: 7%;
   top: 50%;
   transform: translateY(-50%);
   width: 520px;

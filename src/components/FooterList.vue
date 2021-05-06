@@ -26,15 +26,33 @@
 
 <style lang="scss" scoped>
   @import '@/scss/var';
+  @import '@/scss/mixins';
+  div {
+    @include media-desk-first(tablet) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
   span {
     background-color: transparent;
     color: $brand;
     font-weight: bold;
+    @include media-desk-first(tablet) {
+      margin-bottom: 5px;
+    }
+    @include media-desk-first(tablet) {
+    display: block;
+    text-align: center;
+  }
   }
   ul,
   li {
     display: inline-block;
     margin-left: 13px;
+    @include media-desk-first(tablet) {
+      margin-left: 0;
+      margin-right: 13px;
+    }
   }
   img {
     vertical-align: middle;

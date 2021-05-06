@@ -15,6 +15,7 @@
 </script>
 
 <style lang="scss" scoped>
+  @import '@/scss/mixins';
   @import '@/scss/var';
   h3 {
     font-size: 1rem;
@@ -31,6 +32,9 @@
       list-style: none;
       margin: 5px 0;
       cursor: pointer;
+      @include media-desk-first(desktop) {
+        color: $white;
+      }
       &:hover {
         color: $white;
       }

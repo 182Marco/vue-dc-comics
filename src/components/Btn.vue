@@ -11,6 +11,7 @@
 
 <style lang="scss" scoped>
   @import '@/scss/var';
+  @import '@/scss/mixins';
   button {
     @import '@/scss/var';
     background-color: transparent;

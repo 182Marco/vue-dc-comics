@@ -26,33 +26,31 @@
   @import '@/scss/mixins';
   @import '@/scss/var';
 
-  nav,
-  li,
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
- 
- ul{
+  ul {
     display: flex;
     justify-content: space-around;
-    align-items:center;
- }
+    @include media-desk-first(desktop) {
+      justify-content: flex-start;
+    }
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+  }
 
   li {
     font-size: 0.8rem;
     font-weight: 300;
-    @include media-desk-first(full-desktop) {
-    font-size: 0.7rem;
-    }    
-    @include media-desk-first(desktop) {
-    display:block;
     flex-wrap: wrap;
-    width: 50vw;
+    @include media-desk-first(full-desktop) {
+      font-size: 0.7rem;
     }
-    flex-wrap: nowrap;
+    @include media-desk-first(desktop) {
+      width: 50%;
+    }
     transition: scale 0.4s;
+    a {
+      display: block;
+    }
     // flex-wrap: nowrap;
     &:hover {
       transform: scale(1.02);
@@ -65,6 +63,7 @@
   img {
     width: 50px;
     padding-right: 8px;
+    vertical-align: middle;
     &[alt='comic Shop Locator'] {
       width: 40px;
     }

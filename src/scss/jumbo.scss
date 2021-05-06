@@ -1,8 +1,11 @@
-@import '@/scss/mixins';
+@import './mixins';
 
 .stripe3 {
   overflow: hidden;
   height: 40vh;
+  @include media-desk-first(tablet) {
+    height: 50vw;
+  }
   .cont {
     background-color: $black;
     display: flex;
@@ -24,6 +27,18 @@
   @include media-desk-first(sm-desktop) {
     height: 112vh;
   }
+  @include media-desk-first(xl-tablet) {
+    height: 116vh;
+  }
+  @include media-desk-first(tablet) {
+    height: 140vh;
+  }
+  @include media-desk-first(s-tablet) {
+    height: 165vh;
+  }
+  @include media-desk-first(s-phone) {
+    height: 205vh;
+  }
   .cont {
     position: relative;
     .jumboBtn {
@@ -40,7 +55,13 @@
         padding: 5px 50px;
         display: block;
         position: static;
-        margin: 0 auto;
+        margin: 5vh auto 0;
+        @include media-desk-first(tablet) {
+        margin: 0 auto ;
+        }
+        @include media-desk-first(s-tablet) {
+        margin: 4vh auto 0;
+        }
       }
     }
   }
@@ -53,16 +74,22 @@ img.jumbo {
 .stripe4 {
   background-color: $brand;
   height: 15vh;
-  @include media-desk-first(sm-desktop) {
-  height: 50vh;
+  @include media-desk-first(desktop) {
+    height: 33vh;
   }
 }
 
 main {
   height: 42vh;
   background-image: url('./assets/img/footer-bg.jpg');
-  .cont {
-    position: relative;
-    overflow: hidden;
-  }
+  overflow: hidden;
+  position: relative
+}
+
+
+.comic-box {
+  padding-top: 8vh;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
 }

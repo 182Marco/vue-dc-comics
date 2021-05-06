@@ -14,8 +14,10 @@
     <!-- lista fumetti -->
     <div class="stripe3dot1">
       <div class="cont">
-        <Btn class="jumboBtn" :fullBg="fullBg" :content="BtnJumbo" />
-        <Magazines :dcComics="dcComics" />
+        <Btn class="jumboBtn" :fullBg="true" :content="BtnJumbo" />
+        <div class="comic-box">
+          <Magazines class="magazines" v-for="(comic, i) in dcComics" :key="i" :comic="comic" />
+        </div>
         <Btn class="jumboBtn btnMore" :fullBg="fullBg" :content="BtnMore" />
       </div>
     </div>
@@ -33,9 +35,9 @@
           </div>
           <Lists :comics="dcs" :titles="titles[2]" />
           <Lists :comics="sites" :titles="titles[3]" />
-          <img src="@/assets/img/dc-logo-bg.png" alt="big-logo" />
         </div>
       </div>
+          <img src="@/assets/img/dc-logo-bg.png" alt="big-logo" />
     </main>
     <!-- footer -->
     <footer>
@@ -100,5 +102,6 @@
 
   #app {
     height: 100vh;
+    width: 100vw;
   }
 </style>
