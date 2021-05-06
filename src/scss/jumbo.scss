@@ -37,7 +37,7 @@
     height: 165vh;
   }
   @include media-desk-first(s-phone) {
-    height: 210;
+    height: 210vh;
   }
   .cont {
     position: relative;
@@ -57,10 +57,10 @@
         position: static;
         margin: 5vh auto 0;
         @include media-desk-first(tablet) {
-        margin: 0 auto ;
+          margin: 0 auto;
         }
         @include media-desk-first(s-tablet) {
-        margin: 4vh auto 0;
+          margin: 4vh auto 0;
         }
       }
     }
@@ -83,9 +83,8 @@ main {
   height: 42vh;
   background-image: url('./assets/img/footer-bg.jpg');
   overflow: hidden;
-  position: relative
+  position: relative;
 }
-
 
 .comic-box {
   padding-top: 8vh;
