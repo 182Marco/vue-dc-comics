@@ -4,7 +4,9 @@
       <div class="cont">
         <!-- logo -->
         <img class="logo" src="@/assets/img/dc-logo.png" alt="logo" />
-        <NavigateBar />
+        <NavigateBar class="navDesk">
+          <Hamburger class="hamburger"> </Hamburger>
+        </NavigateBar>
       </div>
     </div>
     <div class="stripe3">
@@ -16,7 +18,12 @@
       <div class="cont">
         <Btn class="jumboBtn" :fullBg="true" :content="BtnJumbo" />
         <div class="comic-box">
-          <Magazines class="magazines" v-for="(comic, i) in dcComics" :key="i" :comic="comic" />
+          <Magazines
+            class="magazines"
+            v-for="(comic, i) in dcComics"
+            :key="i"
+            :comic="comic"
+          />
         </div>
         <Btn class="jumboBtn btnMore" :fullBg="fullBg" :content="BtnMore" />
       </div>
@@ -37,7 +44,7 @@
           <Lists :comics="sites" :titles="titles[3]" />
         </div>
       </div>
-          <img src="@/assets/img/dc-logo-bg.png" alt="big-logo" />
+      <img src="@/assets/img/dc-logo-bg.png" alt="big-logo" />
     </main>
     <!-- footer -->
     <footer>
@@ -52,6 +59,7 @@
 
 <script>
   import NavigateBar from './components/NavigateBar.vue';
+  import Hamburger from './components/Hamburger.vue';
   import MiddleLinks from './components/MiddleLinks.vue';
   import FooterList from '@/components/FooterList.vue';
   import Btn from './components/Btn.vue';
@@ -72,6 +80,7 @@
       FooterList,
       Lists,
       Magazines,
+      Hamburger,
     },
     data() {
       return {
