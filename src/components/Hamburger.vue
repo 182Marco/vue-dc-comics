@@ -1,5 +1,5 @@
 <template>
-  <a class="box">
+  <a @click="$emit('OpenMenuMob')" class="box">
     <div class="line"></div>
     <div class="line"></div>
     <div class="line"></div>
@@ -30,7 +30,7 @@
       background-color: $brand;
     }
     .line {
-      background-color: $black;
+      background-color: $dark2;
       transition: background-color 0.5s;
       @include width-height(100%, 5px);
     }

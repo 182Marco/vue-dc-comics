@@ -1,65 +1,77 @@
 <template>
   <div id="app">
-    <div class="stripe2">
-      <div class="cont">
-        <!-- logo -->
-        <img class="logo" src="@/assets/img/dc-logo.png" alt="logo" />
-        <NavigateBar class="navDesk">
-          <Hamburger class="hamburger"> </Hamburger>
-        </NavigateBar>
-      </div>
-    </div>
-    <div class="stripe3">
-      <!-- jumbotron -->
-      <img class="jumbo" src="@/assets/img/jumbotron.jpg" alt="jumbotron.jpg" />
-    </div>
-    <!-- lista fumetti -->
-    <div class="stripe3dot1">
-      <div class="cont">
-        <Btn class="jumboBtn" :fullBg="true" :content="BtnJumbo" />
-        <div class="comic-box">
-          <Magazines
-            class="magazines"
-            v-for="(comic, i) in dcComics"
-            :key="i"
-            :comic="comic"
-          />
+    <div v-show="!MenuMobDisplay">
+      <div class="stripe2">
+        <div class="cont">
+          <!-- logo -->
+          <img class="logo" src="@/assets/img/dc-logo.png" alt="logo" />
+          <NavigateBar class="navDesk">
+            <Hamburger @OpenMenuMob="MenuMobDisplay = true" class="hamburger">
+            </Hamburger>
+          </NavigateBar>
         </div>
-        <Btn class="jumboBtn btnMore" :fullBg="fullBg" :content="BtnMore" />
       </div>
-    </div>
-    <div class="stripe4">
-      <!-- links under jumbo -->
-      <MiddleLinks />
-    </div>
-    <main>
-      <div class="cont">
-        <div class="list-wrap">
-          <div>
-            <!-- liste sulla parte con bg img scura -->
-            <Lists :comics="comics" :titles="titles[0]" />
-            <Lists :comics="shops" :titles="titles[1]" />
+      <div class="stripe3">
+        <!-- jumbotron -->
+        <img
+          class="jumbo"
+          src="@/assets/img/jumbotron.jpg"
+          alt="jumbotron.jpg"
+        />
+      </div>
+      <!-- lista fumetti -->
+      <div class="stripe3dot1">
+        <div class="cont">
+          <Btn class="jumboBtn" :fullBg="true" :content="BtnJumbo" />
+          <div class="comic-box">
+            <Magazines
+              class="magazines"
+              v-for="(comic, i) in dcComics"
+              :key="i"
+              :comic="comic"
+            />
           </div>
-          <Lists :comics="dcs" :titles="titles[2]" />
-          <Lists :comics="sites" :titles="titles[3]" />
+          <Btn class="jumboBtn btnMore" :fullBg="fullBg" :content="BtnMore" />
         </div>
       </div>
-      <img src="@/assets/img/dc-logo-bg.png" alt="big-logo" />
-    </main>
-    <!-- footer -->
-    <footer>
-      <div class="cont">
-        <Btn :content="BtnFooter" />
-        <FooterList />
+      <div class="stripe4">
+        <!-- links under jumbo -->
+        <MiddleLinks />
       </div>
-    </footer>
-    <div class="low-foot"></div>
+      <main>
+        <div class="cont">
+          <div class="list-wrap">
+            <div>
+              <!-- liste sulla parte con bg img scura -->
+              <Lists :comics="comics" :titles="titles[0]" />
+              <Lists :comics="shops" :titles="titles[1]" />
+            </div>
+            <Lists :comics="dcs" :titles="titles[2]" />
+            <Lists :comics="sites" :titles="titles[3]" />
+          </div>
+        </div>
+        <img src="@/assets/img/dc-logo-bg.png" alt="big-logo" />
+      </main>
+      <!-- footer -->
+      <footer>
+        <div class="cont">
+          <Btn :content="BtnFooter" />
+          <FooterList />
+        </div>
+      </footer>
+      <div class="low-foot"></div>
+    </div>
+    <div class="menuMob-cont" v-show="MenuMobDisplay == true">
+      <!-- <i class="fas fa-times"></i> -->
+      <MenuMobile @closeMenuMob="MenuMobDisplay = false" />
+    </div>
   </div>
 </template>
 
 <script>
   import NavigateBar from './components/NavigateBar.vue';
   import Hamburger from './components/Hamburger.vue';
+  import MenuMobile from './components/MenuMobile.vue';
   import MiddleLinks from './components/MiddleLinks.vue';
   import FooterList from '@/components/FooterList.vue';
   import Btn from './components/Btn.vue';
@@ -81,10 +93,12 @@
       Lists,
       Magazines,
       Hamburger,
+      MenuMobile,
     },
     data() {
       return {
         fullBg: true,
+        MenuMobDisplay: false,
         BtnJumbo: 'CURRENT SERIES',
         BtnFooter: 'SIGN UP NOW!',
         BtnMore: 'LOAD MORE',

@@ -53,7 +53,7 @@
       @include flex();
     }
     .navLink {
-      color: $black;
+      color: $dark2;
       display: flex;
       align-items: center;
       border-bottom: 5px solid transparent;

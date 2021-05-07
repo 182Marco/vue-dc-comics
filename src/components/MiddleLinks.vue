@@ -47,6 +47,11 @@
     @include media-desk-first(desktop) {
       width: 50%;
     }
+    @include media-desk-first(s-phone) {
+      padding: 2vh 0;
+      width: 100%;
+      @include flex(row, center, center);
+    }
     transition: scale 0.4s;
     a {
       display: block;

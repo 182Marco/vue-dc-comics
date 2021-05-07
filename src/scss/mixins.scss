@@ -2,11 +2,11 @@
 //media queries se si lavora desktop first
 @mixin media-desk-first($breakpoint: $tablet) {
   @if $breakpoint == s-phone {
-    @media screen and (max-width: 360px) {
+    @media screen and (max-width: 370px) {
       @content;
     }
   } @else if $breakpoint == phone {
-    @media screen and (max-width: 385px) {
+    @media screen and (max-width: 400px) {
       @content;
     }
   } @else if $breakpoint == xs-tablet {

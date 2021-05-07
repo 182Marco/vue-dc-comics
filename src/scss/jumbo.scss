@@ -7,7 +7,7 @@
     height: 50vw;
   }
   .cont {
-    background-color: $black;
+    background-color: $dark2;
     display: flex;
     align-items: center;
     color: $white;
@@ -15,17 +15,17 @@
 }
 
 .stripe3dot1 {
-  height: 70vh;
+  height: 78vh;
   background-color: $dark;
   padding-bottom: 20px;
   @include media-desk-first(full-desktop) {
-    height: 85vh;
+    height: 82vh;
   }
   @include media-desk-first(desktop) {
-    height: 110vh;
+    height: 105vh;
   }
   @include media-desk-first(sm-desktop) {
-    height: 112vh;
+    height: 108vh;
   }
   @include media-desk-first(xl-tablet) {
     height: 116vh;
@@ -37,7 +37,7 @@
     height: 165vh;
   }
   @include media-desk-first(s-phone) {
-    height: 210vh;
+    height: 213vh;
   }
   .cont {
     position: relative;
@@ -76,6 +76,9 @@ img.jumbo {
   height: 15vh;
   @include media-desk-first(desktop) {
     height: 33vh;
+  }
+  @include media-desk-first(s-phone) {
+    height: 50vh;
   }
 }
 
